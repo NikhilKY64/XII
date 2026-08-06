@@ -1,0 +1,54 @@
+class calculator:
+    num1 = None
+    num2 = None
+    
+    def sum(self):
+        return self.num1 + self.num2
+        
+    def sub(self):
+        return self.num1 - self.num2
+        
+    def product(self):
+        return self.num1 * self.num2
+        
+    def div(self):
+        return self.num1 / self.num2
+        
+        
+        
+class student:
+    Class = "XII-E"
+    
+    def __init__ (self, name, rollno, opsub):
+        self.name = name
+        self.rollno = rollno
+        self.opsub = opsub
+    
+    def info(self):
+        return f"Name: {self.name} \nRollNo: {self.rollno} \nOptional Subject: {self.opsub}"
+
+        
+print('---------------------------------------------------------------------------')
+
+c = calculator()
+c.num1 = int(input("Enter your first number: "))
+c.num2 = int(input("Enter your second number: "))
+
+print()
+print("Sum =", c.sum())
+print("Difference =", c.sub())
+print("Product =", c.product())
+print("Division =", c.div())
+print()
+print("---------------------------------------------------------------------------")
+
+class_stu = {1:["Ayush","cs"], 2:["Abhinav","PE"],3:["Harshit","cs"], 4:["Hasan","cs"], 5:["Madhur","cs"], 6:["Nikhil","cs"], 7:["Pawan","cs"], 8:["Utkarsh","cs"]}
+
+for i,j in class_stu.items():
+    s = student(j[0],i,j[1])
+    
+    print(s.info())
+    print()
+    
+print("---------------------------------------------------------------------------")
+
